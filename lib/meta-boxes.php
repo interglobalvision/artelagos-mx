@@ -87,5 +87,53 @@ function igv_cmb_metaboxes() {
     )
   ) );
 
+  $visitar_page = get_page_by_path('visitar');
+
+  $visitar_metabox = new_cmb2_box( array(
+    'id'            => $prefix . 'visitar_metabox',
+    'title'         => esc_html__( 'Fields', 'cmb2' ),
+    'object_types'  => array( 'page' ), // Post type
+    'show_on'      => array(
+      'key' => 'id',
+      'value' => array($visitar_page->ID)
+    ),
+  ) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Address', 'cmb2' ),
+		'id'   => $prefix . 'address',
+		'type' => 'textarea_small',
+	) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Email', 'cmb2' ),
+		'id'   => $prefix . 'email',
+		'type' => 'text',
+	) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Phone', 'cmb2' ),
+		'id'   => $prefix . 'phone',
+		'type' => 'text',
+	) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Opening times', 'cmb2' ),
+		'id'   => $prefix . 'space_opening_times',
+		'type' => 'textarea_small',
+	) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Public transportation', 'cmb2' ),
+		'id'   => $prefix . 'public_transportation',
+		'type' => 'textarea_small',
+	) );
+
+  $visitar_metabox->add_field( array(
+		'name' => esc_html__( 'Exterior photo', 'cmb2' ),
+		'id'   => $prefix . 'exterior_photo',
+		'type' => 'file',
+	) );
+
 }
 ?>
