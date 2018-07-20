@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbf9f95b1add9419e94f3ff28c9c90e4",
+    "content-hash": "cf3949dcbd66257010f1550440b734e1",
     "packages": [
+        {
+            "name": "alexis-magina/cmb2-field-post-search-ajax",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alexis-magina/cmb2-field-post-search-ajax.git",
+                "reference": "4c8120e5919339fc692acd3823f91f0381040905"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alexis-magina/cmb2-field-post-search-ajax/zipball/4c8120e5919339fc692acd3823f91f0381040905",
+                "reference": "4c8120e5919339fc692acd3823f91f0381040905",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">5.2.4"
+            },
+            "suggest": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Magina",
+                    "email": "contact@magina.fr",
+                    "homepage": "https://github.com/alexis-magina/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CMB2 field type to attach posts to each others. Search with Ajax.",
+            "homepage": "https://github.com/alexis-magina/cmb2-field-post-search-ajax",
+            "keywords": [
+                "attached",
+                "metabox",
+                "plugin",
+                "post",
+                "related",
+                "relationship",
+                "wordpress"
+            ],
+            "time": "2017-04-24T16:05:39+00:00"
+        },
         {
             "name": "fightbulc/moment",
             "version": "1.26.10",
@@ -174,7 +220,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "alexis-magina/cmb2-field-post-search-ajax": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
