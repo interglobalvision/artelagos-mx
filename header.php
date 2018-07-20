@@ -41,7 +41,7 @@ get_template_part('partials/seo');
             </li>
             <li class="menu-divider"></li>
             <li class="grid-item">
-              <a href="<?php echo home_url('residentes'); ?>">Residentes</a>
+              <a href="<?php echo home_url('residencias'); ?>">Residencias</a>
             </li>
             <li class="grid-item">
               <a href="<?php echo home_url('estudios'); ?>">Estudios</a>
