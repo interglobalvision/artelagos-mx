@@ -87,6 +87,157 @@ function igv_cmb_metaboxes() {
     )
   ) );
 
+  /**
+	 * Home
+	 */
+
+  $home_page = get_page_by_path('home');
+
+  $home_metabox = new_cmb2_box( array(
+    'id'            => $prefix . 'home_metabox',
+    'title'         => esc_html__( 'Fields', 'cmb2' ),
+    'object_types'  => array( 'page' ), // Post type
+    'show_on'      => array(
+      'key' => 'id',
+      'value' => array($home_page->ID)
+    ),
+  ) );
+
+  $sponsor_group = $home_metabox->add_field( array(
+		'id'          => $prefix . 'footer_sponsor_group',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => esc_html__( 'Footer Sponsor {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => esc_html__( 'Add Another Sponsor', 'cmb2' ),
+			'remove_button' => esc_html__( 'Remove Sponsor', 'cmb2' ),
+			'sortable'      => true, // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+
+  $home_metabox->add_group_field( $sponsor_group, array(
+		'name'       => esc_html__( 'Logo', 'cmb2' ),
+		'id'         => 'logo',
+		'type'       => 'file',
+	) );
+
+  $home_metabox->add_group_field( $sponsor_group, array(
+		'name'       => esc_html__( 'Website', 'cmb2' ),
+		'id'         => 'website',
+		'type'       => 'text_url',
+	) );
+
+  /**
+	 * Nosotros
+	 */
+
+  $nosotros_page = get_page_by_path('nosotros');
+
+  $nosotros_metabox = new_cmb2_box( array(
+    'id'            => $prefix . 'nosotros_metabox',
+    'title'         => esc_html__( 'Fields', 'cmb2' ),
+    'object_types'  => array( 'page' ), // Post type
+    'show_on'      => array(
+      'key' => 'id',
+      'value' => array($nosotros_page->ID)
+    ),
+  ) );
+
+  $team_group = $nosotros_metabox->add_field( array(
+		'id'          => $prefix . 'team_group',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => esc_html__( 'Team Member {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => esc_html__( 'Add Another Team Member', 'cmb2' ),
+			'remove_button' => esc_html__( 'Remove Team Member', 'cmb2' ),
+			'sortable'      => true, // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+
+  $nosotros_metabox->add_group_field( $team_group, array(
+		'name'       => esc_html__( 'Name', 'cmb2' ),
+		'id'         => 'name',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_group_field( $team_group, array(
+		'name'       => esc_html__( 'Title', 'cmb2' ),
+		'id'         => 'title',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_group_field( $team_group, array(
+		'name'       => esc_html__( 'Email', 'cmb2' ),
+		'id'         => 'email',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_field( array(
+		'name'       => esc_html__( 'Partners', 'cmb2' ),
+		'id'         => $prefix . 'partners',
+		'type'       => 'text',
+		'repeatable'      => true,
+	) );
+
+  $collaborator_group = $nosotros_metabox->add_field( array(
+		'id'          => $prefix . 'collaborator_group',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => esc_html__( 'Collaborator {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => esc_html__( 'Add Another Collaborator', 'cmb2' ),
+			'remove_button' => esc_html__( 'Remove Collaborator', 'cmb2' ),
+			'sortable'      => true, // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+
+  $nosotros_metabox->add_group_field( $collaborator_group, array(
+		'name'       => esc_html__( 'Name', 'cmb2' ),
+		'id'         => 'name',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_group_field( $collaborator_group, array(
+		'name'       => esc_html__( 'Organization', 'cmb2' ),
+		'id'         => 'org',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_group_field( $collaborator_group, array(
+		'name'       => esc_html__( 'Email', 'cmb2' ),
+		'id'         => 'email',
+		'type'       => 'text',
+	) );
+
+  $sponsor_group = $nosotros_metabox->add_field( array(
+		'id'          => $prefix . 'sponsor_group',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => esc_html__( 'Sponsor {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => esc_html__( 'Add Another Sponsor', 'cmb2' ),
+			'remove_button' => esc_html__( 'Remove Sponsor', 'cmb2' ),
+			'sortable'      => true, // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+
+  $nosotros_metabox->add_group_field( $sponsor_group, array(
+		'name'       => esc_html__( 'Name', 'cmb2' ),
+		'id'         => 'name',
+		'type'       => 'text',
+	) );
+
+  $nosotros_metabox->add_group_field( $sponsor_group, array(
+		'name'       => esc_html__( 'Website', 'cmb2' ),
+		'id'         => 'website',
+		'type'       => 'text_url',
+	) );
+
+  /**
+	 * Visitar
+	 */
+
   $visitar_page = get_page_by_path('visitar');
 
   $visitar_metabox = new_cmb2_box( array(
