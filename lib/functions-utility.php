@@ -74,3 +74,8 @@ function echo_post_meta($post_id, $field_id) {
     echo '';
   }
 }
+
+function igv_date_string ($start_date, $end_date) {
+  echo !empty($start_date) ? date('j M', $start_date) : '';
+  echo !empty($start_date) && !empty($end_date) ? ' — ' . date('j M y', $end_date) : date(' y', $start_date);
+}
