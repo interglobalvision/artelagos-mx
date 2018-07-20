@@ -6,7 +6,7 @@
 function create_custom_pages() {
   $custom_pages = array(
     'home' => 'Home',
-    'expociciones' => 'Exposiciones',
+    'exposiciones' => 'Exposiciones',
     'programa' => 'Programa',
     'residencias' => 'Residencias',
     'estudios' => 'Estudios',
