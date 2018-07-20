@@ -29,5 +29,34 @@ get_template_part('partials/seo');
 <section id="main-container">
 
   <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <div class="container">
+      <div class="grid-row">
+        <nav id="main-nav">
+          <ul id="main-nav-list">
+            <li class="grid-item">
+              <a href="<?php echo home_url('exposiciones'); ?>">Exposiciones</a>
+            </li>
+            <li class="grid-item">
+              <a href="<?php echo home_url('programa'); ?>">Programa</a>
+            </li>
+            <li class="menu-divider"></li>
+            <li class="grid-item">
+              <a href="<?php echo home_url('residentes'); ?>">Programa</a>
+            </li>
+            <li class="grid-item">
+              <a href="<?php echo home_url('estudios'); ?>">Estudios</a>
+            </li>
+            <li class="menu-divider"></li>
+            <li class="grid-item">
+              <a href="<?php echo home_url('nosotros'); ?>">Nosotros</a>
+            </li>
+            <li class="grid-item">
+              <a href="<?php echo home_url('visitar'); ?>">Visitar</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="grid-item"><a href="<?php echo home_url(); ?>">lagos</a></h1>
+        <div class="grid-item menu-toggle">Menu</div>
+      </div>
+    </div>
   </header>
