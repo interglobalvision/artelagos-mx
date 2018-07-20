@@ -6,6 +6,12 @@
 function create_custom_pages() {
   $custom_pages = array(
     'home' => 'Home',
+    'expociciones' => 'Exposiciones',
+    'programa' => 'Programa',
+    'residencias' => 'Residencias',
+    'estudios' => 'Estudios',
+    'visitar' => 'Visitar',
+    'nosotros' => 'Nosotros',
   );
   foreach($custom_pages as $page_name => $page_title) {
     $page = get_page_by_path($page_name);
